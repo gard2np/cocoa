@@ -262,6 +262,7 @@
 						(id === "upgrade" ? "" : "&launch=true&url=" + this.link_app);
 				}
 				return Launcher;
+				wcs.event("eventgroup01", "eventlaunch02");
 			})();
 
 			// 쿼리스트링 파싱
@@ -311,6 +312,7 @@
 					document.location = launcher.link_android;
 				}
 				window.addEventListener("load", preventPopup);
+				wcs.event("eventgroup01", "eventlaunch01");
 			}
 
 			function preventPopup() {
@@ -339,6 +341,7 @@
 					<button
 						class="round_btn bg_blue mt2rem mb1rem"
 						onclick="launchApp(1)"
+						onclick="wcs.event('eventgroup01', 'installclick01')"
 					>
 						가스앱 설치하기
 					</button>
